@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <RootNamespace>Muslim.Web</RootNamespace>
-    <AssemblyName>Muslim.Web</AssemblyName>
+    <AssemblyName>Muslim.Api</AssemblyName>
+    <RootNamespace>Muslim.Api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

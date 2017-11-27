@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Muslim.Infrastructure.Data</AssemblyName>
+    <RootNamespace>Muslim.Infrastructure.Data</RootNamespace>
+  </PropertyGroup>
+
+</Project>
