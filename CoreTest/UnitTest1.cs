@@ -8,6 +8,7 @@ namespace Muslim.CoreTest
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
