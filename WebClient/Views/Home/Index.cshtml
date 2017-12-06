@@ -1,4 +1,6 @@
-﻿<section id="feature">
+﻿@model WebClient.Models.Home.HomeVM
+
+<section id="feature">
     <div class="container">
         <div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
             <h2>Recent News &amp; Updates</h2><br>
@@ -11,48 +13,11 @@
         </div>
         <div class="row">
             <div class="features">
-                <div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
-                    <div class="feature-wrap">
-                        <i class="fa fa-bullhorn"></i>
-                        <h2>Title</h2>
-                        <h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h3>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
-                    <div class="feature-wrap">
-                        <i class="fa fa-comments"></i>
-                        <h2>Title</h2>
-                        <h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h3>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
-                    <div class="feature-wrap">
-                        <i class="fa fa-cloud-download"></i>
-                        <h2>Title</h2>
-                        <h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h3>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
-                    <div class="feature-wrap">
-                        <i class="fa fa-leaf"></i>
-                        <h2>Title</h2>
-                        <h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h3>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
-                    <div class="feature-wrap">
-                        <i class="fa fa-cogs"></i>
-                        <h2>Title</h2>
-                        <h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h3>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
-                    <div class="feature-wrap">
-                        <i class="fa fa-heart"></i>
-                        <h2>Title</h2>
-                        <h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h3>
-                    </div>
-                </div>
+                @foreach(var feature in Model.Features)
+                {
+                    @Html.Partial("~/Views/Home/Feature", feature)
+
+                }
             </div>
         </div>
     </div>
@@ -64,102 +29,10 @@
             <p class="lead">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم<br> sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam</p>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title</a> </h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title</a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title </a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title </a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title</a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title </a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title </a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <div class="recent-work-wrap">
-                    <img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
-                    <div class="overlay">
-                        <div class="recent-work-inner">
-                            <h3><a href="#">Event Title </a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                            <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @foreach(var gallery in Model.Galleries)
+            {
+                @Html.Partial("~/Views/Home/Gallery", gallery)
+            }
         </div>
     </div>
 </section>
@@ -170,72 +43,10 @@
             <p class="lead">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم<br> sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam</p>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services1.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Class</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services2.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Class</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services3.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Class</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services4.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Volunteer</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services5.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Volunteer</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services6.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Volunteer</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
+            @foreach(var service in Model.Services)
+            {
+                @Html.Partial("~/Views/Home/Service", service)
+            }
         </div>
     </div>
 </section>
