@@ -6,10 +6,4 @@
     <RootNamespace>Muslim.Core</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Domain\Commets\" />
-    <Folder Include="Domain\Users\" />
-    <Folder Include="Domain\Posts\" />
-  </ItemGroup>
-
 </Project>
