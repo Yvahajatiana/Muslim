@@ -6,11 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebClient.Controllers
 {
-    public class AboutController : BaseController
+    public class BaseController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }

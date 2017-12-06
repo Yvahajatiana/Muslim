@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebClient.Controllers
 {
-    public class ContactController : Controller
+    public class ContactController : BaseController
     {
         public IActionResult Index()
         {

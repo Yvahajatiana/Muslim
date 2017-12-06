@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebClient.Controllers
 {
-    public class PrayerController : Controller
+    public class PrayerController : BaseController
     {
         public IActionResult Index()
         {

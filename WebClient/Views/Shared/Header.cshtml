@@ -38,10 +38,9 @@
             </div>
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="prayers.html">Prayers</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li class="active">@Html.ActionLink("Home","Index","Home")</li>
+                    <li>@Html.ActionLink("About Us","Index","About")</li>
+                    <li>@Html.ActionLink("Prayers","Index","Prayer")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Drop Down<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
@@ -51,8 +50,8 @@
                             <li><a href="#">One</a></li>
                         </ul>
                     </li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
+                    <li>@Html.ActionLink("Blog","Index","Blog")</li>
+                    <li>@Html.ActionLink("Contact","Index","Contact")</li>
                 </ul>
             </div>
         </div>
