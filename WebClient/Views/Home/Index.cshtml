@@ -1,55 +1,65 @@
 ﻿@model WebClient.Models.Home.HomeVM
 
-<section id="feature">
-    <div class="container">
-        <div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-            <h2>Recent News &amp; Updates</h2><br>
-            <h2>Visit: <a target="_blank" href="https://freeislamictemplates.appspot.com/" title="Free Islamic Templates">Free Islamic Templates</a></h2>
-            <p class="lead">
-                بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿١﻿)
-                ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِينَ (﻿٢﻿) ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿٣﻿) مَـٰلِكِ يَوۡمِ ٱلدِّينِ (﻿٤﻿) إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ (﻿٥﻿) ٱهۡدِنَا ٱلصِّرَٲطَ ٱلۡمُسۡتَقِيمَ (﻿٦﻿) صِرَٲطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ (﻿٧﻿)<br>بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿١﻿)
-                ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِينَ (﻿٢﻿) ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿٣﻿) مَـٰلِكِ يَوۡمِ ٱلدِّينِ (﻿٤﻿) إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ (﻿٥﻿) ٱهۡدِنَا ٱلصِّرَٲطَ ٱلۡمُسۡتَقِيمَ (﻿٦﻿) صِرَٲطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ (﻿٧﻿)
-            </p>
-        </div>
-        <div class="row">
-            <div class="features">
-                @foreach(var feature in Model.Features)
-                {
-                    @Html.Partial("~/Views/Home/Feature", feature)
+@if (Model.Features != null)
+{
+    <section id="feature">
+        <div class="container">
+            <div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <h2>@Model.Features.Title</h2>
+                <p class="lead">
+                    @Model.Features.Description
+                </p>
+            </div>
+            <div class="row">
+                <div class="features">
+                    @foreach (var feature in Model.Features.Thumbnails)
+                    {
+                        @Html.Partial("Feature", feature)
 
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
+
+@if (Model.Galleries != null)
+{
+    <section id="recent-works">
+        <div class="container">
+            <div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <h2>@Model.Galleries.Title</h2>
+                <p class="lead">@Model.Galleries.Description</p>
+            </div>
+            <div class="row">
+                @foreach (var gallery in Model.Galleries.Thumbnails)
+                {
+                    @Html.Partial("Gallery", gallery)
                 }
             </div>
         </div>
-    </div>
-</section>
-<section id="recent-works">
-    <div class="container">
-        <div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-            <h2>Masjid Photo Gallery</h2>
-            <p class="lead">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم<br> sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam</p>
+    </section>
+}
+
+@if (Model.Services != null)
+{
+    <section id="services" class="service-item">
+        <div class="container">
+            <div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <h2>@Model.Services.Title</h2>
+                <p class="lead">@Model.Services.Thumbnails</p>
+            </div>
+            <div class="row">
+                @foreach (var service in Model.Services.Thumbnails)
+                {
+                    @Html.Partial("Service", service)
+                }
+            </div>
         </div>
-        <div class="row">
-            @foreach(var gallery in Model.Galleries)
-            {
-                @Html.Partial("~/Views/Home/Gallery", gallery)
-            }
-        </div>
-    </div>
-</section>
-<section id="services" class="service-item">
-    <div class="container">
-        <div class="center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-            <h2>Classes &amp; Community Events</h2>
-            <p class="lead">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم<br> sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam</p>
-        </div>
-        <div class="row">
-            @foreach(var service in Model.Services)
-            {
-                @Html.Partial("~/Views/Home/Service", service)
-            }
-        </div>
-    </div>
-</section>
+    </section>
+}
+
 <section id="partner">
     <div class="container">
         <div class="center wow fadeInDown" style="visibility: hidden; animation-name: none;">

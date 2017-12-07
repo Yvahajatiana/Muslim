@@ -8,10 +8,10 @@ namespace WebClient.Models.Home
 {
     public class HomeVM : BaseVM
     {
-        public IEnumerable<Thumbnail> Features { get; set; }
+        public HomeSectionVM Features { get; set; }
 
-        public IEnumerable<Thumbnail> Galleries { get; set; }
+        public HomeSectionVM Galleries { get; set; }
 
-        public IEnumerable<Thumbnail> Services { get; set; }
+        public HomeSectionVM Services { get; set; }
     }
 }
