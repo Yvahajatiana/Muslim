@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Muslim.Core.Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Muslim.Core.Domain.Thumbnails
 {
-    public class Thumbnail : EntityBase<Guid>
+    public class Thumbnail : Child<Guid>
     {
         public string Title { get; set; }
 

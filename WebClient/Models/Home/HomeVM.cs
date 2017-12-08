@@ -13,5 +13,9 @@ namespace WebClient.Models.Home
         public HomeSectionVM Galleries { get; set; }
 
         public HomeSectionVM Services { get; set; }
+
+        public HomeSectionVM Parteners { get; set; }
+
+        public HomeSectionVM ContactInfo { get; set; }
     }
 }
