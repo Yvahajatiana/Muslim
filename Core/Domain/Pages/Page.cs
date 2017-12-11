@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Muslim.Core.Domain.Pages
 {
-    public class Page
+    public class Page : SEO
     {
-
+        public string Title { get; set; }
     }
 }
