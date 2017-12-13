@@ -184,6 +184,7 @@ ClientBin/
 orleans.codegen.cs
 
 /node_modules
+/bower_components
 
 /yarn.lock
 

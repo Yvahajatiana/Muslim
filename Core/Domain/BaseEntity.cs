@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Muslim.Core.Domain
 {
-    public class EntityBase<T> : IEntity<T>
+    public class BaseEntity<T> : IEntity<T>
     {
         private DateTime? creationDate;
 

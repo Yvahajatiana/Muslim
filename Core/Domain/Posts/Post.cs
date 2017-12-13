@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Muslim.Core.Domain.Posts
 {
-    public class Post:EntityBase<Guid>
+    public class Post:BaseEntity<Guid>
     {
         public string Content { get; set; }
 
