@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Muslim.Core.Domain
 {
-    public interface IRepository<T> where T : BaseEntity<T>
+    public interface IRepository<T> where T : class, IEntity
     {
         Task<T> GetByIdAsync(object id);
 

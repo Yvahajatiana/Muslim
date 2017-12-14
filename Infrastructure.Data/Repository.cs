@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Muslim.Infrastructure.Data
 {
-    public class Repository<T> : IRepository<T> where T : BaseEntity<T>
+    public class Repository<T> : IRepository<T> where T :class, IEntity
     {
         private readonly DataContext _context;
 
